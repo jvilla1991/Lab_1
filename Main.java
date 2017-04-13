@@ -11,9 +11,10 @@ public class Main {
         double perimeter = 0.0;
         double area = 0.0;
         boolean b = true;
+        String a = " ";
 
 
-        while (b = true) {
+        do {
             System.out.print("Enter the length of Grand Circus classroom: ");
             length = scnr.nextDouble();
             if (length == 0.0)
@@ -38,8 +39,18 @@ public class Main {
             System.out.println("The Perimeter of the Grand Circus classroom is: " + perimeter);
             System.out.println("The Area of the Grand Circus classroom is: " + area);
             System.out.println("The Volume of the Grand Circus classroom is: " + volume);
-            System.out.println("Enter '0' at anytime if you are finished.");
-        }
+            System.out.println("Do you wish to continue? (y/n)?");
+            a = scnr.next();
+            if ("y".equalsIgnoreCase(a))
+            {
+                continue;
+            }
+            else
+            {
+                b = false;
+            }
+
+        } while (b == true);
 
         return;
 
